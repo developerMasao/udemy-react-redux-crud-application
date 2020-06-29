@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const App = () => {
   const profiles = [
@@ -20,6 +21,11 @@ const User = (props) => {
       Hi,I am {props.name} and I like {props.like}
     </div>
   );
+};
+
+User.propTypes = {
+  name: PropTypes.string,
+  like: PropTypes.string.isRequired,
 };
 
 export default App;
